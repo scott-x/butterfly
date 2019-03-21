@@ -1,0 +1,5 @@
+node_moduels
+.DS_Store
+*.log
+db
+routes
