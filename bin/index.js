@@ -22,7 +22,7 @@ inquirer
             require('./task').run('mysql')
            break;
         case "mongodb":
-            require('./task').run('mongodb')
+            require('./task').mongo_task('mongodb')
            break;      
      }
 

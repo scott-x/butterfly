@@ -24,9 +24,9 @@ var jobDetailSchema = new Schema({
 
 // define you model here:
 // define your collection name -> mysql table
-var JobDetailModel = mongoose.model('benchmark_job_detail', jobDetailSchema); 
+var JobDetailModel = mongoose.model('collectionName', jobDetailSchema); 
 //The database you want to connect, if it doesn’t exist, it will created automatically unless the collection of the row was affected
-mongoose.connect('mongodb://localhost:27017/benchmark_job_detail',{ useNewUrlParser: true } ); 
+mongoose.connect('mongodb://localhost:27017/DBNAME',{ useNewUrlParser: true } ); 
 
 module.exports={
    JobDetailModel

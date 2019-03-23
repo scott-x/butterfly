@@ -1,14 +1,14 @@
 const mysql = require('mysql');
 const MYSQL_CONFIG = require('./config');
-//创建连接对象
+//build the connect object
 const con = mysql.createConnection(MYSQL_CONFIG)
 
-//开始连接
+//connect
 con.connect()
 
-//执行sql语句
+//run sql statement
 /**
- sql: sql语句
+ sql: sql statement
 **/
 
 function exec(sql){
@@ -24,8 +24,9 @@ function exec(sql){
    return promise;
 }
 
+//You needn't disconnect the database in developing, since every instance is singleton.
 function close(){
-  con.end() //实际开发是单例模式，不用关闭mysql连接
+  con.end() 
 }
 
 module.exports={
